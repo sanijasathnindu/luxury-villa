@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-creative";
+
+:root {
+  --background: #0f0e0c;
+  --foreground: #f8f2e8;
+  --charcoal: #0f0e0c;
+  --charcoal-2: #15120d;
+  --warm-white: #f8f2e8;
+  --soft-gold: #d9b76f;
+  --muted-sage: #607f77;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: #0f0e0c;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-geist-sans), serif;
+}
+
+::selection {
+  background: rgba(217, 183, 111, 0.35);
+  color: #ffffff;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.villa-room-swiper {
+  --swiper-theme-color: #d9b76f;
+  --swiper-navigation-size: 18px;
+  overflow: visible !important;
+  padding-bottom: 56px !important;
+}
+
+.villa-room-swiper .swiper-button-next,
+.villa-room-swiper .swiper-button-prev {
+  top: auto;
+  bottom: 0;
+  height: 42px;
+  width: 42px;
+  border: 1px solid rgba(21, 18, 13, 0.14);
+  border-radius: 999px;
+  background: #15120d;
+  color: #f8f2e8;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.villa-room-swiper .swiper-button-next {
+  right: calc(50% - 52px);
+}
+
+.villa-room-swiper .swiper-button-prev {
+  left: calc(50% - 52px);
+}
+
+.villa-room-swiper .swiper-button-next:hover,
+.villa-room-swiper .swiper-button-prev:hover {
+  background: #d9b76f;
+  color: #15120d;
+  transform: translateY(-2px);
+}
+
+.villa-room-swiper .swiper-pagination {
+  bottom: 10px !important;
+  pointer-events: none;
+}
+
+.villa-room-swiper .swiper-pagination-bullet {
+  background: rgba(21, 18, 13, 0.35);
+  opacity: 1;
+}
+
+.villa-room-swiper .swiper-pagination-bullet-active {
+  background: #d9b76f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
