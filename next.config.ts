@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
 
-  outputFileTracingRoot: process.cwd(),
+  basePath: "/luxury-villa",
+  assetPrefix: "/luxury-villa",
 
   images: {
     unoptimized: true,
